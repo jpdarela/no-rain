@@ -5,6 +5,7 @@ import os
 nx = 720      # numero de colunas em cada imagem
 ny = 360      #  /////////linhas em cada imagem 
 
+
 ## FUNÇÔES QUE VAO FAZER A PARADA TODA:
 def list_files(cwd = os.getcwd()):
     files = []
@@ -130,8 +131,8 @@ def write_flt(data_array, layers, filename):
             write_header(outfile_hd,data_array[image])
                    
         # salve em formato ascii grid : bom pra arquivar os seus dados!
-        dt1 = np.fromfile(outfile_name, count=nx*ny, dtype=np.float32).reshape((nx,ny))
-        save_ascii_grid(dt1,outfile_name.split('.')[0] + '.asc' )
+        #dt1 = np.fromfile(outfile_name, count=nx*ny, dtype=np.float32).reshape((nx,ny))
+        #save_ascii_grid(dt1,outfile_name.split('.')[0] + '.asc' )
     
     # finaliza
     while True:
